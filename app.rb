@@ -66,7 +66,7 @@ class App
         puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
-    display_menu
+    
   end
 
   def create_student
