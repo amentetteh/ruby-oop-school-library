@@ -1,6 +1,6 @@
 require_relative '../nameable'
-require_relative '../capitalize_decorator'
-require_relative '../trimmer_decorator'
+require_relative '../decorators/capitalize_decorator'
+require_relative '../decorators/trimmer_decorator'
 require_relative './rental'
 
 class Person < Nameable
