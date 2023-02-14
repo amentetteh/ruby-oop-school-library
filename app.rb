@@ -1,7 +1,7 @@
-require_relative './student'
-require_relative './teacher'
-require_relative './book'
-require_relative './rental'
+require_relative './entities/student'
+require_relative './entities/teacher'
+require_relative './entities/book'
+require_relative './entities/rental'
 
 class App
   def initialize
@@ -66,7 +66,7 @@ class App
         puts "#{index}) [#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
     end
-    display_menu
+  display_menu
   end
 
   def create_student
