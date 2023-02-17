@@ -76,14 +76,63 @@ class App
 
 
 
-    user_input = gets.chomp
-
-
-
-    process_input(user_input)
+    gets.chomp
   end
 
-  def process_input1(input)
+  # def process_input1(input)
+  #   case input
+  #   when '1'
+  #     find_books
+  #   when '2'
+  #     find_people
+  #   when '3'
+  #     create_person
+  #   when '4'
+  #     create_book
+  #   end
+  # end
+
+  # def process_input2(input)
+  #   case input
+
+
+
+  #   when '5'
+
+
+
+  #     create_rental
+
+
+
+  #   when '6'
+
+
+
+  #     find_rentals
+
+
+
+  #   when '7'
+
+
+
+  #     leave
+
+
+
+  #   else
+
+
+
+  #     display_menu
+
+
+
+  #   end
+  # end
+
+  def process_input(input)
     case input
     when '1'
       find_books
@@ -93,55 +142,13 @@ class App
       create_person
     when '4'
       create_book
-    end
-  end
-
-  def process_input2(input)
-    case input
-
-
-
     when '5'
-
-
-
       create_rental
-
-
-
     when '6'
-
-
-
       find_rentals
-
-
-
-    when '7'
-
-
-
-      leave
-
-
-
     else
-
-
-
       display_menu
-
-
-
     end
-  end
-
-  def process_input(input)
-    process_input1(input)
-
-
-
-    process_input2(input)
   end
 
   def find_books
