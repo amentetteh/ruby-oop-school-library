@@ -4,8 +4,8 @@ class Student < Person
   attr_reader :classroom
   attr_accessor :id
 
-  def initialize(classroom, age, name = 'unknown', parent_permission: true, id = Random.rand(1..1000))
-    super(age, name, parent_permission, id)
+  def initialize(id, classroom, age, name = 'unknown', parent_permission: true)
+    super(id, age, name, parent_permission)
     @classroom = classroom
   end
 
@@ -30,6 +30,6 @@ class Student < Person
   end
 
   def self.json_create(object)
-    new(object['classroom'], object['age'], object['name'], object['parent_permission'], object['id'])
+    new(object['id'], object['classroom'], object['age'], object['name'], object['parent_permission'])
   end
 end

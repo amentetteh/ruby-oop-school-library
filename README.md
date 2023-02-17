@@ -92,7 +92,7 @@ To run the project, execute the following command:
 
 <!-- AUTHORS -->
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 
 👤 **Amen Tetteh**
@@ -100,6 +100,19 @@ To run the project, execute the following command:
 - GitHub: [@githubhandle](https://github.com/amentetteh)
 - Twitter: [@twitterhandle](https://twitter.com/amentetteh)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/amentetteh)
+
+👤 **Koami NOGBEDJI**
+
+- GitHub: [@hopeforkoami](https://github.com/hopeforkoami)
+- Twitter: [@KNogbedji](https://twitter.com/KNogbedji)
+- LinkedIn: [koami-nogbedji-a155b7233](https://www.linkedin.com/in/koami-nogbedji-a155b7233/)
+
+
+👤 **Benjamin Ejike**
+
+- GitHub: [@githubhandle](https://github.com/osbentech)
+- Twitter: [@twitterhandle](https://twitter.com/EjikeOsegbo)
+- LinkedIn: [LinkedIn](www.linkedin.com/in/benjamin-ejike-632248206)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
