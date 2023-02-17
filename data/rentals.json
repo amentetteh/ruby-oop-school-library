@@ -1,0 +1,16 @@
+[
+  {
+    "json_class": "Rental",
+    "date": "23/05/2023",
+    "book": { "json_class": "Book", "title": "hv,gjgk", "author": "ddddd" },
+    "person": {
+      "json_class": "Teacher",
+      "id": 587,
+      "specialization": "QQQ",
+      "age": 11,
+      "name": "HOLO",
+      "parent_permission": "y"
+    },
+    "id": 893
+  }
+]
