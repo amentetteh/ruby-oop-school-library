@@ -2,12 +2,13 @@ require_relative './entities/student'
 require_relative './entities/teacher'
 require_relative './entities/book'
 require_relative './entities/rental'
+require 'json'
 
 class App
   def initialize
-    @books = []
-    @people = []
-    @rentals = []
+    @books = load_data('books')
+    @people = load_data('people')
+    @rentals = load_data('rentals')
     puts 'Welcome to School library App!'
   end
 
@@ -43,7 +44,7 @@ class App
     when '6'
       find_rentals
     when '7'
-      exit
+      leave
     else
       display_menu
     end
@@ -78,7 +79,7 @@ class App
     parent_permission = gets.chomp.downcase == 'y'
     print 'Classroom: '
     classroom = gets.chomp
-    @people.push(Student.new(classroom, age, name: name, parent_permission: parent_permission))
+    @people.push(Student.new(classroom, age, name, parent_permission))
     puts
     puts 'Person created successfuly'
   end
@@ -90,7 +91,7 @@ class App
     name = gets.chomp
     print 'Specialization: '
     specialization = gets.chomp
-    @people.push(Teacher.new(specialization, age, name: name))
+    @people.push(Teacher.new(specialization, age, name))
     puts
     puts 'Person created successfuly'
   end
@@ -150,7 +151,22 @@ class App
     display_menu
   end
 
-  def exit
+  def leave
+    save_data('books', @books)
+    save_data('people', @people)
+    save_data('rentals', @rentals)
     puts 'Thank you for using the app!'
+    exit(true)
+  end
+
+  def save_data(class_name, object)
+    File.write("./data/#{class_name}.json", JSON.dump(object))
+  end
+
+  def load_data(class_name)
+    return [] unless File.exist?("./data/#{class_name}.json")
+
+    file_data = File.read("./data/#{class_name}.json")
+    JSON.parse(file_data, create_additions: true)
   end
 end
