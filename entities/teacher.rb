@@ -13,7 +13,7 @@ class Teacher < Person
   end
 
   def to_json(*args)
-    { 
+    {
       JSON.create_id => self.class.name,
       'id' => @id,
       'specialization' => @specialization,
@@ -24,6 +24,6 @@ class Teacher < Person
   end
 
   def self.json_create(object)
-    new(object['specialization'], object['age'], object['name'], object['parent_permission'],object['id'])
+    new(object['specialization'], object['age'], object['name'], object['parent_permission'], object['id'])
   end
 end
