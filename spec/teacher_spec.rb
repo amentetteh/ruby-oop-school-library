@@ -11,8 +11,9 @@ describe Teacher do
     end
 
     it 'Returns JSON after a teacher is added' do
-      # rubocop:disable Layout/LineLength
-      expect(@teacher.to_json).to eql '{"json_class":"Teacher","id":1232,"specialization":"maths","age":50,"name":"Thomas","parent_permission":"y"}'
+      json_string = '{"json_class":"Teacher","id":1232,"specialization":"maths",'
+      json_string.concat '"age":50,"name":"Thomas","parent_permission":"y"}'
+      expect(@teacher.to_json).to eql json_string
     end
   end
 end

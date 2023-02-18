@@ -13,9 +13,9 @@ describe Student do
     end
 
     it 'Returns JSON after a student added' do
-      # rubocop:disable Layout/LineLength
-      expect(@student.to_json).to eql '{"json_class":"Student","id":11,"classroom":"Class 6","age":17,"name":"Chloe","parent_permission":"y"}'
-      # rubocop:enable
+      json_string = '{"json_class":"Student","id":11,"classroom":"Class 6",'
+      json_string.concat '"age":17,"name":"Chloe","parent_permission":"y"}'
+      expect(@student.to_json).to eql json_string
     end
   end
 end
