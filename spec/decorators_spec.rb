@@ -24,7 +24,7 @@ end
 
 describe BaseDecorator do
   before :each do
-    @person = Person.new(15,26, 'KoamiNogbedji')
+    @person = Person.new(15, 26, 'KoamiNogbedji')
     @base_decorator = BaseDecorator.new(@person)
   end
 
@@ -43,7 +43,7 @@ end
 
 describe CapitalizeDecorator do
   before :each do
-    @person = Person.new(12,26, 'KoamiNogbedji')
+    @person = Person.new(12, 26, 'KoamiNogbedji')
     @capitalize = CapitalizeDecorator.new(@person)
   end
 
@@ -62,7 +62,7 @@ end
 
 describe TrimmerDecorator do
   before :each do
-    @person = Person.new(12,26, 'KoamiNogbedji')
+    @person = Person.new(12, 26, 'KoamiNogbedji')
     @trimmer = TrimmerDecorator.new(@person)
   end
 
