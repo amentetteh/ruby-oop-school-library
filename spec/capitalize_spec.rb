@@ -1,3 +1,4 @@
+require'capitalize_decorator'
 require_relative '../entities/person'
 
 describe CapitalizeDecorator do
