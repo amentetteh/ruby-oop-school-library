@@ -4,7 +4,7 @@ require_relative '../entities/person'
 describe CapitalizeDecorator do
   before :each do
     @person = Person.new 2333, 12, 'serena tetteh', 'n'
-    @capitalize_decorator = CapitalizeDecorator.new @person.name
+    @capitalize_decorator = CapitalizeDecorator.new 'serena tetteh'
   end
   it 'Given one parameter, a BaseDecorator object is returns' do
     expect(@capitalize_decorator).to be_an_instance_of CapitalizeDecorator
