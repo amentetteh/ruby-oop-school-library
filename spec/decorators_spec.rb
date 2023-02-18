@@ -1,6 +1,8 @@
-require './capitalize_decorator'
-require './nameable'
-require './trimmer_decorator'
+require_relative '../Decorate/base_decorator'
+require_relative '../Decorate/capitalize_decorator'
+require_relative '../Decorate/nameable'
+require_relative '../Decorate/trimmer_decorator'
+require_relative '../entities/person'
 
 describe Nameable do
   before :each do
@@ -15,14 +17,14 @@ describe Nameable do
 
   context 'When using correct_name method' do
     it 'should raise an error' do
-      expect { @nameable.correct_name }.to raise_error('NotImplementedError')
+      expect { @nameable.correct_name }.to raise_error(NotImplementedError)
     end
   end
 end
 
 describe BaseDecorator do
   before :each do
-    @person = Person.new(26, 'KoamiNogbedji')
+    @person = Person.new(15,26, 'KoamiNogbedji')
     @base_decorator = BaseDecorator.new(@person)
   end
 
@@ -41,7 +43,7 @@ end
 
 describe CapitalizeDecorator do
   before :each do
-    @person = Person.new(26, 'KoamiNogbedji')
+    @person = Person.new(12,26, 'KoamiNogbedji')
     @capitalize = CapitalizeDecorator.new(@person)
   end
 
@@ -60,7 +62,7 @@ end
 
 describe TrimmerDecorator do
   before :each do
-    @person = Person.new(26, 'KoamiNogbedji')
+    @person = Person.new(12,26, 'KoamiNogbedji')
     @trimmer = TrimmerDecorator.new(@person)
   end
 
