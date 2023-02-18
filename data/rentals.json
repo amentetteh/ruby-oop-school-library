@@ -1,1 +1,1 @@
-[]
+[{"json_class":"Rental","date":"02/17/2023","book":{"json_class":"Book","title":"Ric Dad Poor Dad","author":"Robert Kiwozaki"},"person":{"json_class":"Student","id":223,"classroom":"Class 6","age":11,"name":"Benoit","parent_permission":true},"id":866}]
