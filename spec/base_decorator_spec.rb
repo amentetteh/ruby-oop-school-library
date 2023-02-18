@@ -1,5 +1,5 @@
-require_relative '../base_decorator'
-require_relative '../entities/base_decorator'
+require './base_decorator'
+require './entities/person'
 
 describe BaseDecorator do
   before :each do
