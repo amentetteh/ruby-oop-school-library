@@ -8,12 +8,12 @@ describe Person do
     @person = Person.new 3444, 12, 'Gerson', 'y'
     @teacher = Teacher.new 344_555, 'Biology', 'ODONKOR', 'y'
     @book = Book.new 'Rich Dad, Poor Dad', 'Robert Kiwozaki'
-    @rental = Rental.new '02/07/2023', @book, @teacher 
+    @rental = Rental.new '02/07/2023', @book, @teacher
   end
-  context 'When testing the Book class' do 
-    it 'Given id, age, name  and permission a Person Object must be returned' do 
+  context 'When testing the Book class' do
+    it 'Given id, age, name  and permission a Person Object must be returned' do
       expect(@person).to be_an_instance_of Person
-    end  
+    end
 
     # it 'Should return true or false wether the person has more than 18 or not' do
     #   expect(@person.of_age?).to eql false
@@ -28,6 +28,5 @@ describe Person do
       puts @book.rentals
       expect(@book.rentals.length).to eql 1
     end
-
-  end  
+  end
 end
