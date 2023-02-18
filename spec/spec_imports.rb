@@ -1,0 +1,6 @@
+require_relative'../entities/book'
+require_relative'../entities/classroom'
+require_relative'../entities/person'
+require_relative'../entities/student'
+require_relative'../entities/teacher'
+require_relative'../entities/rental'
